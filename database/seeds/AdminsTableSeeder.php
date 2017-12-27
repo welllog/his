@@ -14,7 +14,7 @@ class AdminsTableSeeder extends Seeder
         \Illuminate\Support\Facades\DB::table('admins')->insert([
             'username' => 'admin',
             'password' => password_hash('admin888', PASSWORD_DEFAULT, ['cost' => 12]),
-            'email' => '824526698@qq.com',
+            'email' => '2531072685@qq.com',
             'tel' => '1508272311',
             'status' => 1
         ]);
