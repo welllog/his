@@ -4,6 +4,10 @@
 ### 项目示例地址
 [his.orinfy.com/admin](http://his.orinfy.com/admin)
 
+|账号|密码|
+|:--:|:--:|
+|admin|admin888|
+
 
 ### 安装步骤
 
@@ -17,7 +21,7 @@
 * 需要环境为php>7。
 * 默认配置使用了redis及phpredis扩展，可自行更改相应配置
 * 目前仅实现了后台登录及权限功能
-* 后台登录: /admin/login   账号：admin 密码:admin888
+* 后台路由: domain/admin
 
 ### 感谢
 * 后台ui是在BrotherMa的layuicms上稍作修改而来，[layuicms地址](https://github.com/BrotherMa/layuiCMS)

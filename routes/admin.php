@@ -12,8 +12,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
         Route::get('menu', 'IndexController@getMenu');
         Route::get('forbidden', 'IndexController@forbidden');
         Route::get('main', 'IndexController@main');
-        Route::get('user/password/edit', 'IndexController@editPassword');
-        Route::put('user/password', 'IndexController@editPassword');
 
         Route::group(['middleware' => 'rbac'], function () {
             Route::get('user/password/edit', 'IndexController@editPassword');
@@ -47,6 +45,5 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
             Route::put('role/{role_id}/rules', 'RuleController@storeRules');
         });
     });
-    Route::get('test', 'TestController@test');
 
 });

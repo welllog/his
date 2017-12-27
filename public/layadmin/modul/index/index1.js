@@ -1,14 +1,14 @@
-var tab;
+var $,tab,skyconsWeather;
 layui.config({
-	base : "/layadmin/modul/index/"
-}).use(['bodyTab','form','element','layer'],function(){
-	var form = layui.form,
+	base : "/adstatic/index/"
+}).use(['bodyTab','form','element','layer','jquery'],function(){
+	var form = layui.form(),
 		layer = layui.layer,
-		element = layui.element,
+		element = layui.element();
 		$ = layui.jquery;
 		tab = layui.bodyTab({
-			openTabNum : "5",  //最大可打开窗口数量
-			url : "/admin/menu" //获取菜单json地址
+			openTabNum : "50",  //最大可打开窗口数量
+			url : "/menu" //获取菜单json地址
 		});
 
 	//更换皮肤
@@ -19,7 +19,7 @@ layui.config({
 				$("body").addClass(window.sessionStorage.getItem("skin"));
 			}else{
 				$(".layui-layout-admin .layui-header").css("background-color",skin.split(',')[0]);
-				$(".layui-side").css("background-color",skin.split(',')[1]);
+				$(".layui-bg-black").css("background-color",skin.split(',')[1]);
 				$(".hideMenu").css("background-color",skin.split(',')[2]);
 			}
 		}
@@ -44,8 +44,8 @@ layui.config({
 								'</div>'+
 							'</div>'+
 							'<div class="layui-form-item skinBtn">'+
-								'<a href="javascript:;" class="layui-btn layui-btn-sm layui-btn-normal" lay-submit lay-filter="changeSkin">确定更换</a>'+
-								'<a href="javascript:;" class="layui-btn layui-btn-sm layui-btn-primary" lay-submit lay-filter="noChangeSkin">我再想想</a>'+
+								'<a href="javascript:;" class="layui-btn layui-btn-small layui-btn-normal" lay-submit="" lay-filter="changeSkin">确定更换</a>'+
+								'<a href="javascript:;" class="layui-btn layui-btn-small layui-btn-primary" lay-submit="" lay-filter="noChangeSkin">我再想想</a>'+
 							'</div>'+
 						'</form>'+
 					'</div>',
@@ -75,7 +75,7 @@ layui.config({
 						$(".topColor,.leftColor,.menuColor").val('');
 						$("body").removeAttr("class").addClass("main_body "+skinColor+"");
 						$(".skinCustom").removeAttr("style");
-						$(".layui-side,.hideMenu,.layui-layout-admin .layui-header").removeAttr("style");
+						$(".layui-bg-black,.hideMenu,.layui-layout-admin .layui-header").removeAttr("style");
 					}else{
 						$(".skinCustom").css("visibility","inherit");
 					}
@@ -85,7 +85,7 @@ layui.config({
 					$(".layui-layout-admin .layui-header").css("background-color",$(this).val());
 				})
 				$(".leftColor").blur(function(){
-					$(".layui-side").css("background-color",$(this).val());
+					$(".layui-bg-black").css("background-color",$(this).val());
 				})
 				$(".menuColor").blur(function(){
 					$(".hideMenu").css("background-color",$(this).val());
@@ -111,14 +111,14 @@ layui.config({
 				});
 				form.on("submit(noChangeSkin)",function(){
 					$("body").removeAttr("class").addClass("main_body "+window.sessionStorage.getItem("skin")+"");
-					$(".layui-side,.hideMenu,.layui-layout-admin .layui-header").removeAttr("style");
+					$(".layui-bg-black,.hideMenu,.layui-layout-admin .layui-header").removeAttr("style");
 					skins();
 					layer.closeAll("page");
 				});
 			},
 			cancel : function(){
 				$("body").removeAttr("class").addClass("main_body "+window.sessionStorage.getItem("skin")+"");
-				$(".layui-side,.hideMenu,.layui-layout-admin .layui-header").removeAttr("style");
+				$(".layui-bg-black,.hideMenu,.layui-layout-admin .layui-header").removeAttr("style");
 				skins();
 			}
 		})
@@ -191,7 +191,10 @@ layui.config({
 	        }
 	    });
 	}
-
+	//判断是否处于锁屏状态(如果关闭以后则未关闭浏览器之前不再显示)
+	if(window.sessionStorage.getItem("lockcms") != "true" && window.sessionStorage.getItem("showNotice") != "true"){
+		// showNotice();
+	}
 	$(".showNotice").on("click",function(){
 		// showNotice();
 	})
@@ -293,16 +296,12 @@ layui.config({
 		//渲染顶部窗口
 		tab.tabMove();
 	})
-
 })
 
-//打开新窗口,全局函数
+//打开新窗口
 function addTab(_this){
 	tab.tabAdd(_this);
 }
-
-
-
 
 
 

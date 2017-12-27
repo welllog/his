@@ -62,7 +62,7 @@
         </div>
     </div>
     <!-- 左侧导航 -->
-    <div class="layui-side layui-bg-black">
+    <div class="layui-side">
         <div class="navBar layui-side-scroll"></div>
     </div>
     <!-- 右侧内容 -->

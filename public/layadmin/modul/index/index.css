@@ -50,6 +50,7 @@
 .layui-nav-tree .layui-nav-child a{ padding-left: 40px; }
 .layui-nav-tree .layui-nav-child a:hover{ background-color:#4E5465; }
 .layui-nav-tree .layui-nav-child dd.layui-this a:hover{ background-color:#009688; }
+.layui-side{ background-color: #3A3D49; }
 
 /*右侧body*/
 #top_tabs_box{ padding-right:138px; height:40px; border-bottom:1px solid #e2e2e2; }
@@ -130,10 +131,10 @@
 .skinBtn{ text-align:right; }
 /*橙色*/
 .orange .layui-layout-admin .layui-header{ background-color:orange; }
-.orange .layui-bg-black{ background-color:#e47214; }
+.orange .layui-side{ background-color:#e47214; }
 /*蓝色*/
 .blue .layui-layout-admin .layui-header{ background-color:#3396d8; }
-.blue .layui-bg-black,.blue .hideMenu{ background-color:#146aa2; }
+.blue .layui-side,.blue .hideMenu{ background-color:#146aa2; }
 
 /*自定义*/
 .skinCustom{ visibility:hidden; }
