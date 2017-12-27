@@ -5,9 +5,6 @@ namespace App\Service;
 
 use App\Common\Enum\HttpCode;
 use App\Model\Admin;
-//use App\Model\Loan;
-//use App\Model\LoanPeriods;
-//use App\Model\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
