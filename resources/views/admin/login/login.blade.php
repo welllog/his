@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/layadmin/modul/login/login.css" media="all" />
 </head>
 <body>
+<img class="bgpic" src="/layadmin/modul/login/bg.jpg">
 <div class="login">
     <h1>his-后台登录</h1>
     <form class="layui-form">

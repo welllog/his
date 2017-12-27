@@ -1,5 +1,5 @@
-body{overflow:hidden; background-image: url("bg.jpg");}
-
+body{overflow:hidden;}
+.bgpic{position:absolute; z-index: -1; width: 100%; height: 100%;}
 .login{ height:305px;width:260px;padding: 20px;background-color:rgba(0,0,0,0.5);border-radius: 4px;position:absolute;
     left: 50%;top: 40%; margin:-150px 0 0 -150px;z-index:99;}
 .login h1{ text-align:center; color:#fff; font-size:24px; margin-bottom:20px; }
