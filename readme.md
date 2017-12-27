@@ -2,7 +2,7 @@
 
 ***
 ### 项目示例地址
-[his.orinfy.com/admin](his.orinfy.com/admin)
+[his.orinfy.com/admin](http://his.orinfy.com/admin)
 
 
 ### 安装步骤
