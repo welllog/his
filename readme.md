@@ -1,6 +1,8 @@
 ## his基于*laravel5.5* 跟 *layui2.2* 的极简后台（只有登录和权限）
 
 ***
+### 项目示例地址
+[his.orinfy.com/admin](his.orinfy.com/admin)
 
 
 ### 安装步骤
