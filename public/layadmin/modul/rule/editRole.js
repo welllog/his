@@ -1,6 +1,6 @@
 layui.config({base: '/layadmin/modul/common/'}).use(['form','dialog','his'],function(){
     var form = layui.form,
-        layui = layui.dialog,
+        dialog = layui.dialog,
         his = layui.his;
 
     form.on("submit(editRole)",function(data){

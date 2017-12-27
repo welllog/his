@@ -16,7 +16,7 @@
 	<div class="layui-form links_list">
 	  	<table class="layui-table tree">
 		    <colgroup>
-				<col width="">
+				<col width="100px">
 				<col width="">
 				<col>
 				<col>

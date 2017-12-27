@@ -14,6 +14,8 @@ class LoginController extends Controller
 {
     public function index()
     {
+        $user = Auth::guard('admin')->user();
+        if ($user) return redirect('/admin/index');
         return view('admin.login.login');
     }
 

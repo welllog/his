@@ -34,12 +34,15 @@ class RulesSeeder extends Seeder
             ['title' => '添加管理员', 'href' => '/admin/user/create', 'rule' => 'rulecontroller@addadmin', 'pid' => 4, 'check' => 1, 'status' => 0, 'level' => 3, 'icon' => null, 'sort' => 0],
             ['title' => '编辑管理员', 'href' => '/admin/user/{id}/edit', 'rule' => 'rulecontroller@editadmin', 'pid' => 4, 'check' => 1, 'status' => 0, 'level' => 3, 'icon' => null, 'sort' => 0],
             ['title' => '启用管理员', 'href' => '/admin/user', 'rule' => 'rulecontroller@activeadmin', 'pid' => 4, 'check' => 1, 'status' => 0, 'level' => 3, 'icon' => null, 'sort' => 0],
+            ['title' => '删除管理员', 'href' => '/admin/user', 'rule' => 'rulecontroller@deladmin', 'pid' => 4, 'check' => 1, 'status' => 0, 'level' => 3, 'icon' => null, 'sort' => 0],
             ['title' => '修改密码', 'href' => '/admin/user/password/edit', 'rule' => 'indexcontroller@editpassword', 'pid' => 0, 'check' => 0, 'status' => 0, 'level' => 1, 'icon' => null, 'sort' => 0],
         ]);
 
+        $now = date('Y-m-d H:i:s');
         $roleId = DB::table('roles')->insertGetId([
             'name' => '超级管理员',
-            'sort' => 0
+            'created_at' => $now,
+            'updated_at' => $now
         ]);
         $roleId = 1;
         $rules = DB::table('rules')->pluck('id');
