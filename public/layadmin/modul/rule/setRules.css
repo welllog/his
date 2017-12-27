@@ -1,0 +1,19 @@
+ul.ztree li span.button.switch{margin-right:5px}
+ul.ztree>li{background: #dae6f0;padding: 8px;}
+ul.ztree>li ul li{background: #eef5fa;margin-top: 8px;padding: 5px;}
+ul.ztree>li ul li ul li{background: #f6fbff;padding: 5px;}
+ul.ztree>li ul li ul li ul li{background: #fff;padding: 5px;}
+ul.ztree ul ul ul li{display:inline-block;}
+ul.ztree>ul li>ul>li{padding:5px}
+ul.ztree>ul li>ul{margin-top:12px}
+ul.ztree>ul li{padding:15px;padding-right:25px}
+ul.ztree>ul li{white-space:normal!important;background: #01AAED}
+ul.ztree li{white-space:inherit;}
+ul.ztree>li>a>span{font-size:15px;font-weight:700}
+.list_order {height: 24px;line-height: 24px;width: 50px;border: #FC6 solid 1px;}
+.count,.size{color: #009688;font-style: normal;font-weight: bold;}
+.green{color: #5FB878;}
+.red{color: #FF5722;}
+.orange{color:#FFB800}
+.dtbox{border: 1px solid #ececec;text-align: center;height: 130px;padding: 5px;}
+.dtbox .delimg{position: absolute;top: 5px;right: 5px;border: 1px solid #ececec;width: 18px;height: 18px;color: #FF5722;cursor: pointer;}

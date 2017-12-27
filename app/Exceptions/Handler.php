@@ -2,7 +2,9 @@
 
 namespace App\Exceptions;
 
+use App\Common\Enum\HttpCode;
 use Exception;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -48,6 +50,15 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if ($exception instanceof AuthenticationException) {
+            if ($request->expectsJson()) return ajaxError('您未登录', HttpCode::UNAUTHORIZED);
+            if (in_array('admin', $exception->guards())) return redirect('/admin/login');
+        }
+
+        if ($exception instanceof RbacException) {
+            if ($request->expectsJson()) return ajaxError('您没有权限', HttpCode::FORBIDDEN);
+            return redirect('/admin/forbidden');
+        }
         return parent::render($request, $exception);
     }
 }
