@@ -51,7 +51,7 @@ layui.define('jquery', function(exports){
             },
             success: function(res){
                 if (res.code != 0) {
-                    config.error(res.msg);
+                    config.error(res.exception);
                     return false;
                 }
                 config.success(res.msg, res.data, res.meta);
