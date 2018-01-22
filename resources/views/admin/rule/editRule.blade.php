@@ -8,7 +8,7 @@
 				<select name="pid">
 					<option value="0">默认顶级</option>
 					@foreach($rules as $vo)
-						<option data-level="{{$vo['level']}}" value="{{$vo['id']}}">{{$vo['ltitle']}}</option>
+						<option data-level="{{$vo['level']}}" value="{{$vo['id']}}" @if($vo['id'] == $rule->pid) selected="selected" @endif>{{$vo['ltitle']}}</option>
 					@endforeach
 				</select>
 			</div>
