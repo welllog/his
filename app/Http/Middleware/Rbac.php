@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Exceptions\RbacException;
-use App\Model\Admin;
+use App\Models\Admin;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;

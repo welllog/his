@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Common\Enum\HttpCode;
 use App\Http\Controllers\Controller;
-use App\Model\Admin;
-use App\Model\Role;
-use App\Model\Rule;
+use App\Models\Admin;
+use App\Models\Role;
+use App\Models\Rule;
 use App\Service\AdminService;
 use App\Service\RuleService;
 use Illuminate\Http\Request;

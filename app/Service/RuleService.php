@@ -10,8 +10,8 @@ namespace App\Service;
 
 
 use App\Common\Enum\HttpCode;
-use App\Model\Role;
-use App\Model\Rule;
+use App\Models\Role;
+use App\Models\Rule;
 use Illuminate\Support\Facades\DB;
 
 class RuleService extends BaseService

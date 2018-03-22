@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Illuminate\Foundation\Auth\User;
 
@@ -19,7 +19,7 @@ class Admin extends User
 
     public function roles()
     {
-        return $this->belongsToMany('App\Model\Role', 'admin_role', 'admin_id', 'role_id');
+        return $this->belongsToMany('App\Models\Role', 'admin_role', 'admin_id', 'role_id');
     }
 
     /**

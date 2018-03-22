@@ -4,7 +4,7 @@ namespace App\Service;
 
 
 use App\Common\Enum\HttpCode;
-use App\Model\Admin;
+use App\Models\Admin;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;

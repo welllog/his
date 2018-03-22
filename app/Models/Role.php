@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
@@ -11,12 +11,12 @@ class Role extends Model
 
     public function admins()
     {
-        return $this->belongsToMany('App\Model\Admin', 'admin_role', 'role_id', 'admin_id');
+        return $this->belongsToMany('App\Models\Admin', 'admin_role', 'role_id', 'admin_id');
     }
 
     public function rules()
     {
-        return $this->belongsToMany('App\Model\Rule', 'role_rule', 'role_id', 'rule_id');
+        return $this->belongsToMany('App\Models\Rule', 'role_rule', 'role_id', 'rule_id');
     }
 
     /**

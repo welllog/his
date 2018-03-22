@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Common\Enum\HttpCode;
 use App\Http\Controllers\Controller;
-use App\Model\Admin;
+use App\Models\Admin;
 use App\Service\AdminService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
