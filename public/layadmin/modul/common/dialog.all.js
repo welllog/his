@@ -79,7 +79,7 @@ layui.define('layer', function (exports) {
 
     Dialog.prototype.pop = function (param) {
         // title, area, content, selector, end
-        var wh = param.area || ['900px', '65%'];
+        var wh = param.area || ['80%', '65%'];
         var title = param.title || false;
         var popIndex = layer.open({
             title: title,
@@ -88,6 +88,7 @@ layui.define('layer', function (exports) {
             shadeClose: true,
             shade: 0.8,
             area: wh,
+            maxmin: true,
             success: function (layero, index) {
                 setTimeout(function () {
                     layer.tips('点击此处返回', '.layui-layer-setwin .layui-layer-close', {
@@ -102,7 +103,7 @@ layui.define('layer', function (exports) {
                     });
                 }
             },
-            end: function () {
+            end: function () {  // 层被销毁时执行
                 param.end && param.end();
             }
         })

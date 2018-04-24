@@ -43,6 +43,7 @@ layui.config({base: '/layadmin/modul/common/'}).use(['form','dialog', 'his'],fun
     form.on('switch(isCheck)', function(data){
         var id = $(this).attr('data-id');
         var orig = $(this).prop('checked');
+        var _this = $(this);
         var check;
         if (orig) {
             check = 1;
@@ -59,7 +60,8 @@ layui.config({base: '/layadmin/modul/common/'}).use(['form','dialog', 'his'],fun
             }
             ,error: function(msg){
                 dialog.error(msg, function () {
-                    location.reload();
+                    _this.prop('checked', !orig);
+                    form.render('checkbox');
                 });
             }
             ,success: function(msg, data, meta){
@@ -72,6 +74,7 @@ layui.config({base: '/layadmin/modul/common/'}).use(['form','dialog', 'his'],fun
     form.on('switch(isShow)', function(data){
         var id = $(this).attr('data-id');
         var orig = $(this).prop('checked');
+        var _this = $(this);
         var status;
         if (orig) {
             status = 1;
@@ -88,7 +91,8 @@ layui.config({base: '/layadmin/modul/common/'}).use(['form','dialog', 'his'],fun
             }
             ,error: function(msg){
                 dialog.error(msg, function () {
-                    location.reload();
+                    _this.prop('checked', !orig);
+                    form.render('checkbox');
                 });
             }
             ,success: function(msg, data, meta){
