@@ -61,12 +61,20 @@ layui.define('layer', function (exports) {
                         tips: 3
                     });
                 }, 500)
+
+                layer.full(index);
+                $(window).on("resize", resizeFun = function () {
+                    layer.full(index);
+                    layer.iframeAuto(index);
+                });
+
+            },
+            cancel：function（index）{
+                $(window).off("resize", resizeFun);
             }
+
         })
-        $(window).resize(function () {
-            layer.full(index);
-        })
-        layer.full(index);
+        
     }
 
     Dialog.prototype.pop = function (param) {
@@ -87,6 +95,7 @@ layui.define('layer', function (exports) {
                     });
                 }, 500);
                 if (param.selector) {
+                    // selector为触发按钮的选择器
                     var ibtn = layer.getChildFrame(param.selector, popIndex);
                     ibtn.click(function () {
                         layer.close(popIndex);
@@ -97,6 +106,11 @@ layui.define('layer', function (exports) {
                 param.end && param.end();
             }
         })
+    }
+
+    Dialog.prototype.closeCurIf = function () {
+        var index = parent.layer.getFrameIndex(window.name);
+        parent.layer.close(index);
     }
 
     Dialog.prototype.modal = function (content, area, title) {

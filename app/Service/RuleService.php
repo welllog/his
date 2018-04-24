@@ -73,8 +73,8 @@ class RuleService extends BaseService
         }
         $save = [
             'title' => $param['title'],
-            'href' => strtolower($param['href']),
-            'rule' => $param['rule'],
+            'href' => $param['href'],
+            'rule' => strtolower($param['rule']),
             'icon' => $param['icon'],
         ];
         $re = Rule::where('id', $param['id'])->update($save);
