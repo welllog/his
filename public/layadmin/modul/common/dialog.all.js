@@ -69,7 +69,7 @@ layui.define('layer', function (exports) {
                 });
 
             },
-            cancel：function（index）{
+            cancel: function(index){
                 $(window).off("resize", resizeFun);
             }
 
