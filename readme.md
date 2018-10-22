@@ -1,3 +1,4 @@
+# 该项目已替换为https://github.com/welllog/orinfyAdmin
 ## his基于*laravel5.5* 跟 *layui2.2* 的极简后台（只有登录和权限）
 
 ***
